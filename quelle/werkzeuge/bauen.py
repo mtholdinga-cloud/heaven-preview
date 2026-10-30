@@ -2,7 +2,7 @@ import os; os.makedirs('../../build',exist_ok=True)
 import base64
 s=open('../seite.html').read()
 m={'__TEX_WHITE_HERO__':'tex_white_hero.jpg','__TEX_WHITE_SOFT__':'tex_white_soft.jpg','__TEX_TEAL__':'tex_teal.jpg','__TEX_GOLD__':'tex_gold.jpg','__CLOUD__':'cloud.png'}
-imgs={'__IMG_TRESEN__':'tresen.jpg','__IMG_LOUNGE__':'lounge.jpg','__IMG_DRINK__':'drink.jpg','__IMG_SOFT__':'softdrinks.jpg','__IMG_SCHORLE__':'schorle.jpg'}
+imgs={'__IMG_TRESEN__':'tresen.jpg','__IMG_LOUNGE__':'lounge.jpg','__IMG_SITZ__':'sitzbank.jpg','__IMG_SOFT__':'softdrinks.jpg','__IMG_SCHORLE__':'schorle.jpg'}
 for k,f in imgs.items():
     s=s.replace(k,'data:image/jpeg;base64,'+base64.b64encode(open('../texturen/'+f if f.startswith(('tex_','cloud')) else '../fotos/'+f,'rb').read()).decode())
 for k,f in m.items():

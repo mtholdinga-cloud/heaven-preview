@@ -561,7 +561,7 @@ input[type=range]{width:100%;accent-color:var(--teal);height:32px}
       <div class="ph-stack rv" style="--dl:120ms">
         <figure class="ph wide"><img src="__IMG_TRESEN__" alt="Der Tresen der Heaven Bar mit Halloween-Kürbissen" decoding="async"><figcaption class="phl">Der Tresen</figcaption></figure>
         <figure class="ph"><img src="__IMG_LOUNGE__" alt="Lounge-Bereich mit weißer Federleuchte und Tischlampe" decoding="async"><figcaption class="phl">Die Lounge</figcaption></figure>
-        <figure class="ph"><img src="__IMG_DRINK__" alt="Cremiger Drink im geriffelten Glas mit goldenem Strohhalm" decoding="async"><figcaption class="phl">Drinks</figcaption></figure>
+        <figure class="ph"><img src="__IMG_SITZ__" alt="Ledersitzbank an der Backsteinwand neben dem Tresen" decoding="async"><figcaption class="phl">Die Sitzecke</figcaption></figure>
       </div>
     </div>
     <div class="facts">
@@ -665,14 +665,14 @@ input[type=range]{width:100%;accent-color:var(--teal);height:32px}
             <p class="subh">Wie lange?</p>
             <div class="choices">
               <div class="choice"><input type="radio" name="end" id="end23" value="23" checked><label for="end23"><b>Bis 23 Uhr</b><small>Reguläre Zeit</small></label></div>
-              <div class="choice"><input type="radio" name="end" id="end01" value="01"><label for="end01"><b>Bis 1 Uhr</b><small>Verlängerung, Aufpreis im Angebot</small></label></div>
+              <div class="choice"><input type="radio" name="end" id="end01" value="01"><label for="end01"><b>Bis 1 Uhr</b><small>Verlängerung ohne Aufpreis</small></label></div>
             </div>
           </div>
           <div class="step" data-step="4" hidden>
             <h3>Extras &amp; Verleih</h3>
             <p class="hint">Alles, was ihr sonst selbst besorgen müsstet. Preise stehen im Angebot.</p>
             <div class="choices" id="extraList"></div>
-            <div class="note teal">Mitgebrachtes Essen und Torte sind erlaubt. Kochen vor Ort ist nicht möglich.</div>
+            <div class="note teal">Mitgebrachtes Essen und Torte sind erlaubt, Kochen vor Ort ist nicht möglich. Eigene Musik oder ein DJ sind willkommen, die GEMA-Anmeldung übernehmen wir.</div>
           </div>
           <div class="step" data-step="5" hidden>
             <h3>Wohin geht das Angebot?</h3>
@@ -717,11 +717,11 @@ input[type=range]{width:100%;accent-color:var(--teal);height:32px}
               <dt>Extras</dt><dd id="sExtras">keine</dd>
             </dl>
             <dl class="costs">
-              <dt>Raummiete</dt><dd>250,00 €</dd>
+              <dt>Raummiete</dt><dd>300,00 €</dd>
               <dt>Kaution</dt><dd>150,00 €</dd>
               <dt>Extras</dt><dd id="sExtraCost">–</dd>
             </dl>
-            <p class="fine">Die Bar gehört euch exklusiv. Miete und Extras werden <b>vor dem Event vollständig bezahlt</b>. Die Kaution gibt es nach der Feier zurück. Stornoregeln stehen in den <button type="button" class="linkish" data-sheet="agb">AGB</button>.</p>
+            <p class="fine">Die Bar gehört euch exklusiv. <b>Die 300 € Raummiete bekommt ihr als Getränkeguthaben zurück.</b> Miete und Extras werden <b>vor dem Event vollständig bezahlt</b>. Die Kaution gibt es nach der Feier zurück. Stornoregeln stehen in den <button type="button" class="linkish" data-sheet="agb">AGB</button>.</p>
           </aside></div>
         </div>
       </div>
@@ -744,7 +744,7 @@ input[type=range]{width:100%;accent-color:var(--teal);height:32px}
           <p class="addr-big">Heaven Bar<br>Einsiedlerstraße 9<br>64579 Gernsheim</p>
           <dl class="hours"><dt>Montag – Sonntag</dt><dd>17:00 – 23:00 Uhr</dd><dt>Private Feiern</dt><dd>bis max. 1:00 Uhr</dd></dl>
           <div class="note"><b>Gut zu wissen:</b> Die Heaven Bar liegt im 1. Obergeschoss und ist nur über eine Treppe erreichbar. Einen Aufzug gibt es leider nicht, daher ist die Bar für Rollstuhlfahrer und Gäste mit eingeschränkter Mobilität nicht barrierefrei zugänglich.</div>
-          <p style="margin-top:16px"><span class="ph-tag">Platzhalter</span> Parken &amp; ÖPNV: nächste Haltestelle, Parkplätze in der Nähe.</p>
+          <dl class="hours" style="margin-top:18px"><dt>Parkplatz</dt><dd>ca. 100 m</dd><dt>Bushaltestelle</dt><dd>ca. 150 m</dd><dt>Bahnhof Gernsheim</dt><dd>ca. 400 m</dd></dl>
         </div></div>
       </div>
       <div class="fx rv" style="--dl:120ms">
@@ -798,6 +798,7 @@ const DATA = {
     {cat:"Energy Drinks",items:[{n:"Red Bull",s:"verschiedene Sorten",p:4.0,z:["1","4","14","15"]},{n:"28 BLACK Açaí",s:"",p:4.0,z:["1","14","15"]}]},
     {cat:"Bier",items:[{n:"Desperados",s:"",p:4.0,z:["a"]},{n:"Corona",s:"",p:4.0,z:["a"]},{n:"Pils alkoholfrei",s:"0,33 l",p:3.5,z:["a"]},{n:"Weizen",s:"0,5 l",p:4.1,z:["a","b"]}]},
     {cat:"Apfelwein & Secco",items:[{n:"Bembel",s:"verschiedene Sorten",p:3.5,z:["5","9"]},{n:"Secco in der Dose",s:"",p:3.5,z:["5"]}]},
+    {cat:"Alkoholische Getränke",items:[{n:"Sierra Lime Chelada",s:"",p:5.0,z:[]},{n:"Waldmeister",s:"2 cl",p:2.5,z:[]}]},
     {cat:"Snacks",items:[{n:"Brezeln",s:"",p:1.5,z:["b"]},{n:"Nüsse in der Dose",s:"",p:2.0,z:[]},{n:"BiFi",s:"",p:2.0,z:[]}]}
   ],
   events:[
@@ -979,7 +980,7 @@ const calHead=(y,m)=>`<div class="cal-head"><h3>${MONTHS[m]} ${y}</h3><div class
   form.querySelectorAll("input[name=end]").forEach(r=>r.addEventListener("change",()=>{st.end=r.value;sum()}));
   function sum(){$("#sDate").textContent=st.date?longDate(parse(st.date)):"–";$("#sOcc").textContent=st.occ?DATA.occasions.find(o=>o.id===st.occ).name:"–";
     $("#sGuests").textContent=st.guests+" · "+st.mode;$("#sEnd").textContent=st.end==="23"?"23 Uhr":"1 Uhr (Verlängerung)";
-    $("#sExtras").textContent=st.extras.size?st.extras.size+" ausgewählt":"keine";$("#sExtraCost").textContent=st.extras.size||st.end==="01"?"im Angebot":"–"}
+    $("#sExtras").textContent=st.extras.size?st.extras.size+" ausgewählt":"keine";$("#sExtraCost").textContent=st.extras.size?"im Angebot":"–"}
   function validate(){
     if(st.step===1&&!st.date)return"Bitte wählt einen freien Tag im Kalender.";
     if(st.step===2&&!st.occ)return"Bitte wählt einen Anlass.";
@@ -1041,7 +1042,7 @@ Bestätigt: alle Gäste 18+ · Treppe bekannt · Datenschutz gelesen`;go(6)});
 const SHEETS={
   impressum:`<h2 id="sheetTitle" class="mh">Impressum</h2><span class="ph-tag">Entwurf · vor Veröffentlichung prüfen</span><h3>Angaben gemäß § 5 DDG</h3><p>Heaven Bar<br>Inhaberin: Elena Weigelt<br>Einsiedlerstraße 9<br>64579 Gernsheim</p><h3>Kontakt</h3><p>Telefon: <span class="fill">neue Nummer</span><br>E-Mail: <span class="fill">info@neue-domain.de</span></p><h3>Umsatzsteuer</h3><p>USt-IdNr.: <span class="fill">falls vorhanden</span>, sonst Hinweis auf Kleinunternehmerregelung</p>`,
   datenschutz:`<h2 id="sheetTitle" class="mh">Datenschutz</h2><span class="ph-tag">Gliederung · Text kommt aus einem Generator</span><h3>Verantwortliche</h3><p>Elena Weigelt, Heaven Bar, Einsiedlerstraße 9, 64579 Gernsheim</p><h3>Was diese Seite verarbeitet</h3><ul><li>Hosting und Server-Logfiles (Hoster in der EU, AV-Vertrag)</li><li>Event-Anfrage: Name, E-Mail, Telefon, Wünsche, nur zur Bearbeitung</li><li>Google Maps lädt erst nach eurer Zustimmung</li><li>Schriften lokal eingebunden, keine Verbindung zu Google Fonts</li><li>Keine Tracking- oder Werbe-Cookies</li></ul><h3>Speicherdauer</h3><p>Anfragen ohne Buchung werden nach <span class="fill">z. B. 6 Monaten</span> gelöscht.</p><h3>Eure Rechte</h3><p>Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Beschwerde bei der Aufsichtsbehörde in Hessen.</p>`,
-  agb:`<h2 id="sheetTitle" class="mh">AGB für Feiern</h2><span class="ph-tag">Eckpunkte · juristisch prüfen lassen</span><h3>Miete &amp; Zahlung</h3><ul><li>Raummiete 250 € für die exklusive Nutzung der Bar</li><li>Miete und gebuchte Extras werden vor dem Event vollständig bezahlt</li><li>Kaution 150 €, Rückzahlung nach der Feier abzüglich etwaiger Schäden</li><li>Mindestumsatz: <span class="fill">noch offen</span></li></ul><h3>Stornierung (Vorschlag)</h3><ul><li>Bis 4 Wochen vorher: kostenlos</li><li>Bis 7 Tage vorher: <span class="fill">25 %</span></li><li>Danach: <span class="fill">50–100 %</span></li></ul><h3>Ablauf</h3><ul><li>Ende spätestens 1:00 Uhr</li><li>Raucherlokal, alle Gäste mindestens 18</li><li>Mitgebrachtes Essen erlaubt, kein Kochen vor Ort</li><li>Haftung bei Beschädigung oder Verlust von Leihartikeln</li></ul>`
+  agb:`<h2 id="sheetTitle" class="mh">AGB für Feiern</h2><span class="ph-tag">Eckpunkte · juristisch prüfen lassen</span><h3>Miete &amp; Zahlung</h3><ul><li>Raummiete 300 € für die exklusive Nutzung der Bar, wird vollständig als Getränkeguthaben angerechnet</li><li>Miete und gebuchte Extras werden vor dem Event vollständig bezahlt</li><li>Kaution 150 €, Rückzahlung nach der Feier abzüglich etwaiger Schäden</li></ul><h3>Stornierung</h3><ul><li>Bis 4 Wochen vorher: kostenlos</li><li>Bis 7 Tage vorher: 25 %</li><li>Danach: <span class="fill">50–100 %</span></li></ul><h3>Ablauf</h3><ul><li>Ende spätestens 1:00 Uhr, Verlängerung ab 23 Uhr ohne Aufpreis</li><li>Eigene Musik und DJs erlaubt, GEMA ist angemeldet</li><li>Raucherlokal, alle Gäste mindestens 18</li><li>Mitgebrachtes Essen erlaubt, kein Kochen vor Ort</li><li>Haftung bei Beschädigung oder Verlust von Leihartikeln</li></ul>`
 };
 const sheet=$("#sheet");
 document.addEventListener("click",e=>{const t=e.target.closest("[data-sheet]");if(!t)return;$("#sheetBody").innerHTML=SHEETS[t.dataset.sheet];sheet.hidden=false;$("#sheetClose").focus()});
