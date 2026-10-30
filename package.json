@@ -1,0 +1,11 @@
+{
+  "name": "heaven-preview",
+  "private": true,
+  "description": "Schriften für den Build der Heaven-Bar-Testseite",
+  "dependencies": {
+    "@fontsource/cinzel": "5.0.13",
+    "@fontsource/cormorant-garamond": "5.0.13",
+    "@fontsource/jost": "5.0.13",
+    "@fontsource/pinyon-script": "5.0.13"
+  }
+}
