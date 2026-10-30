@@ -8,7 +8,7 @@
 <title>Heaven Bar</title>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <script>
-/* Testzugang: Seite nur mit Schlüssel aus dem NFC-Chip (?k=...). Kein echter Passwortschutz, hält aber Zufallsbesucher und Suchmaschinen fern. */
+/* Testzugang: Seite nur mit Schlüssel aus dem NFC-Chip (?k=...). Kein echter Passwortschutz. */
 (function(){
   var H="73e46ee339d1bc714d956f7bcc62b313c7a84847fb8325d2cda4d80666479e8c", K="heaven-test-key";
   function sha(t){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(t)).then(function(b){return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")})}
@@ -447,6 +447,39 @@ input[type=range]{width:100%;accent-color:var(--teal);height:32px}
 .js .rv{transform:translateY(34px);opacity:.25;transition:transform .9s cubic-bezier(.16,1,.3,1),opacity .9s cubic-bezier(.16,1,.3,1);transition-delay:var(--dl,0ms)}
 .js .rv.in{transform:none;opacity:1}
 
+/* ---------- Mindest-Schriftgrößen ---------- */
+.d-name sup{font-size:12px}
+.dow,.sum dt,.foot h4,.ph-tag,.evd span{font-size:13px}
+@media (max-width:600px){
+  body{font-size:20px}
+  /* Großbuchstaben-Beschriftungen: größer, etwas weniger gesperrt */
+  .kicker,.subh,.tab,.field label,.sum dt,.foot h4,.ph-tag,.phl,.scroll-hint,.menu-btn,.evd span,.legend summary,.extra .kind,.steps li{font-size:14px;letter-spacing:.12em}
+  .dow{font-size:14px;letter-spacing:.06em}
+  .day{font-size:17px}
+  /* Fließtext klein → gut lesbar */
+  .evt p,.choice label small,.cal-legend,.d-size,.sum .fine,.menu-top .meta,.mnote,.note,.map-in p,.fact small,.btn-plain,.status,.foot .muted,.foot-bottom,.done pre{font-size:16px}
+  .d-name{font-size:21px}
+  .d-name sup{font-size:13px}
+  .d-price{font-size:21px}
+  .scale{font-size:15px}
+  .nav a{font-size:15px;letter-spacing:.16em}
+  .btn{font-size:14px;letter-spacing:.12em}
+  .nav .btn{font-size:14px}
+  .hero-info .addr{font-size:14px;letter-spacing:.1em}
+  .hero-info .tagline{font-size:24px}
+  .evt h4{font-size:21px}
+  .evc.closed h4{font-size:17px}
+  .sum dl{font-size:20px}
+  .legend ul{font-size:18px}
+  .b18{width:44px;height:44px;font-size:15px}
+  .hero-ctas .btn{font-size:14px}
+  body{font-size:21px}
+  .foot ul{font-size:19px}
+  .foot .muted{font-size:18px}
+  .gh{-webkit-text-stroke:.6px #3A2606}
+  .about .big{font-size:24px}
+}
+@media (max-width:370px){.cal-head h3{font-size:19px;white-space:normal}.ibtn{width:40px;height:40px}.cal-nav{gap:6px}}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   .rays,.cloud-layer i,.scroll-hint::after,.status.open .dot,.hero-info > *,.plaque{animation:none}
